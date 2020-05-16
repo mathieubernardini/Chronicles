@@ -1,0 +1,47 @@
+	<main>
+		<section>
+			<h3>Bienvenue dans la session administration du site.</h3>
+			<p>Vous pouvez effectuer divers actions d'administration (à venir).</p>
+			<form id="storyForm" method="POST">
+				<fieldset>
+					<legend>Créer une nouvelle histoire : </legend>
+					<label for="story_name">Nom de l'histoire : </label>
+					<input type='text' name='story_name' id='story_name'>
+					<label for="story_category">Catégorie : </label>
+					<select name="story_category" id="story_category">
+						<option value="">Sélectionnez une catégorie d'histoire</option>
+						<?php for($i = 0; $i < count($categoriesList); $i++) {
+								echo '<option value="'.$categoriesList[$i].'">'.$categoriesList[$i].'</option>';
+							}
+						?>
+					</select>
+					<label for="author_pseudo">Pseudo de l'auteur : </label>
+					<input type='text' name='author_pseudo' id='author_pseudo'>
+					<label for="story_synopsis">Résumé : </label>
+					<textarea rows="10" columns="500" name='story_synopsis' id='story_synopsis'></textarea>
+				</fieldset>
+			</form>
+			<form id="categoryForm" method="POST">
+				<fieldset>
+					<legend>Ajouter une nouvelle catégorie d'histoire : </legend>
+					<label for="category_name">Nom de la catégorie : </label>
+					<input type='text' name='category_name' id='category_name'>
+					<input type='submit' id='submit' value='Valider'>
+					<input type='reset' id='reset' value='Réinitialiser'>
+				</fieldset>
+			</form>
+			<form id="authorForm" method="POST">
+				<fieldset>
+					<legend>Ajouter un nouvel auteur : </legend>
+					<label for="author_FirstName">Prénom de l'auteur : </label>
+					<input type='text' name='author_FirstName' id='author_FirstName'>
+					<label for="author_LastName">Nom de l'auteur : </label>
+					<input type='text' name='author_LastName' id='author_LastName'>
+					<label for="author_Pseudo">Pseudo de l'auteur : </label>
+					<input type='text' name='author_Pseudo' id='author_Pseudo'>
+					<input type='submit' id='submit' value='Valider'>
+					<input type='reset' id='reset' value='Réinitialiser'>
+				</fieldset>
+			</form>
+		</section>
+	</main>

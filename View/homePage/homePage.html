@@ -1,0 +1,20 @@
+
+		<main>
+			<?php
+				
+				if (isset($_SESSION)) {
+
+					// display a message error or a valid connexion depends of whats inside $_SESSION
+
+					if (array_key_exists('user', $_SESSION)) { 
+						include "accueil.html";
+					} elseif (array_key_exists('message', $_SESSION)) {
+						include "errconnexion.html";
+					}
+					
+				}
+
+			?>
+			
+		</main>
+
